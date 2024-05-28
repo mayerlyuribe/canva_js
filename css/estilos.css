@@ -1,0 +1,8 @@
+#miCanvas{
+    border: 2px;color: black;
+    background: rgb(198, 182, 182);
+}
+.color-aleatorio {
+    background-color: rgb(random() * 256, random() * 256, random() * 256);
+  }
+  

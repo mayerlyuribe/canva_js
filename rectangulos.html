@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Rectángulos</title>
+</head>
+<body>
+    <h1>Canvas Básico - Rectángulos</h1>
+    <canvas id="miCanvas" width="500" height="500">
+        Tu navegador no soporta canvas
+    </canvas>
+    <script>
+        
+        window.onload = function()
+        {
+            var canvas = document.getElementById('miCanvas');
+            if(canvas && canvas.getContext)
+            {
+                var ctx = canvas.getContext('2d');
+                if(ctx)
+                {
+                    
+
+                    // aquí es donde dibujamos
+
+
+                    // Dibujamos rectángulos
+
+                    for(i=0; i<10; i++)
+                    {
+                        for(j=0; j<10; j++)
+                        { 
+
+                            ctx.fillStyle = "color"
+                            ctx.strokeStyle = "gray" // col borde
+                            ctx.lineWidth = 2// grosor de linea
+
+                            // Dibujamos rectangulos
+                            ctx.fillRect(i*50,j*50,50,50) // Parámetros (x, y, width, height)
+                            ctx.strokeRect(i*50,j*50,50,50)
+                        }
+                            
+
+                    }
+
+                }
+                else
+                {
+                    alert('Error al crear el contexto');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
